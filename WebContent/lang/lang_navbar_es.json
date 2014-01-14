@@ -1,0 +1,20 @@
+{
+	"titles" : {
+		"home": "Inicio",
+		"experiments": {
+			"header": "Experimentos",
+			"online": {
+				"header": "Online",
+				"solar" : "Solar"
+			},
+			"reservations" : {
+				"header": "RESERVAS",
+				"new": "Nueva",
+				"pending": "Pendientes"
+			}
+		},
+		"images": {
+			"header": "Imágenes"
+		}
+	}
+}

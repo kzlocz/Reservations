@@ -1,0 +1,42 @@
+<link href="pending/css/styles.css" rel="stylesheet"></link>
+<div ng-controller="PendingReservationsListCtrl">
+	<div class="page-header" style="border: none; margin-bottom: 10px">
+		<div class="row" style="margin-bottom: 0px">
+			<h2 style="margin-left: 18px">{{'pending.header'|i18n}}</h2>
+		</div>
+	</div>
+	<div class="animate-show" ng-show="reservationSelected"
+		style="position: relative">
+		<button ng-show="goButton.show" ng-click="go()"
+			tooltip-popup-delay="500" tooltip="Go!" tooltip-placement="top"
+			class="btn btn-success" style="position: absolute"
+			ng-style="goButton.style">
+			<i class="icon-play"></i>
+		</button>
+		<button ng-show="cancelButton.show" ng-click="cancel()"
+			tooltip-popup-delay="500" tooltip="Cancel" tooltip-placement="top"
+			ng-style="cancelButton.style" class="btn btn-danger"
+			style="position: absolute">
+			<i class="icon-remove"></i>
+		</button>
+	</div>
+	<div ng-show="!loading && pending.length > 0" id="table2"
+		align="center" class="animate-show table table-hover"
+		style="cursor: pointer; color: #08C"></div>
+	<div ng-show="loading" style="width: 30%; margin-left: 35%">
+		<div align="center" class="animate-show alert alert-info mess-info">Loading...</div>
+	</div>
+	<div ng-show="pendingRetrieved && pending.length == 0">
+		<div class="alert alert-info animate-show"
+			style="width: 40%; margin-left: 30%">
+			<strong>Sorry!</strong> You don't have any reservations at this
+			moment.<br>Go and make one for you <a
+				href="#/experiments/available">here</a>.
+		</div>
+	</div>
+	<div ng-show="pending.length > 0 && !loading" id="pagination2"
+		class="pagination-centered animate-show">
+		<ul class="aui-pagination-content">
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,53 @@
+{		
+	"home": {
+		"text": "navbar.titles.home",
+		"href": {
+			"app": "GLORIAHub",
+			"path": "/"
+		}
+	},
+	"experiments": {
+		"text": "navbar.titles.experiments.header",
+		"child": [			
+			{
+				"type": "header",
+				"text": "navbar.titles.experiments.reservations.header"			
+			},
+			{
+				"type": "link",
+				"text": "navbar.titles.experiments.reservations.new",
+				"href": {
+					"path": "/new"
+				}
+			},
+			{
+				"type": "link",
+				"text": "navbar.titles.experiments.reservations.pending",
+				"href": {
+					"path": "/pending"
+				}
+			},
+			{
+				"type": "divider"	
+			},
+			{
+				"type": "header",
+				"text": "navbar.titles.experiments.online.header"			
+			},
+			{
+				"type": "link",
+				"text": "navbar.titles.experiments.online.solar",
+				"href": {
+					"app": "GLORIASolarExperiment"
+				}
+			}		
+		]	
+	},
+	"images": {
+		"text": "navbar.titles.images.header",
+		"href": {
+			"path": "/images"
+		}
+			
+	}
+}
