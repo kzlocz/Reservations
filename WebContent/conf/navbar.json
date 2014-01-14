@@ -2,7 +2,7 @@
 	"home": {
 		"text": "navbar.titles.home",
 		"href": {
-			"app": "GLORIAHub",
+			"app": "",
 			"path": "/"
 		}
 	},
@@ -46,6 +46,7 @@
 	"images": {
 		"text": "navbar.titles.images.header",
 		"href": {
+			"app": "",
 			"path": "/images"
 		}
 			

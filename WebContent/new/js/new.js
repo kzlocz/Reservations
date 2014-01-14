@@ -1,51 +1,53 @@
 'use strict';
 
-toolbox.run(function() {
-	toolbox.filter('UTCFullFilter', function() {
-		return function(input) {
-			return new Date(input).toUTCString();
-		};
-	});
+function pad(n) {
+	return (n < 10) ? ("0" + n) : n;
+}
 
-	toolbox.filter('UTCTimeFilter', function() {
-		return function(input) {
-			var date = new Date(input);
-			var dateStr = '' + pad(date.getUTCHours());
-			dateStr += ':' + pad(date.getUTCMinutes());
-			dateStr += ' UT';
-			return dateStr;
-		};
-	});
+toolbox.lazy.filter('UTCFullFilter', function() {
+	return function(input) {
+		return new Date(input).toUTCString();
+	};
+});
 
-	toolbox.filter('TimeFilter', function() {
-		return function(input) {
-			var date = new Date(input);
-			var dateStr = '' + pad(date.getHours());
-			dateStr += ':' + pad(date.getMinutes());
-			return dateStr;
-		};
-	});
+toolbox.lazy.filter('UTCTimeFilter', function() {
+	return function(input) {
+		var date = new Date(input);
+		var dateStr = '' + pad(date.getUTCHours());
+		dateStr += ':' + pad(date.getUTCMinutes());
+		dateStr += ' UT';
+		return dateStr;
+	};
+});
 
-	toolbox.filter('DateFilter', function() {
-		return function(input) {
-			var date = new Date(input);
-			var dateStr = '' + pad(date.getMonth());
-			dateStr += '/' + pad(date.getDate());
-			dateStr += '/' + pad(date.getFullYear());
-			return dateStr;
-		};
-	});
+toolbox.lazy.filter('TimeFilter', function() {
+	return function(input) {
+		var date = new Date(input);
+		var dateStr = '' + pad(date.getHours());
+		dateStr += ':' + pad(date.getMinutes());
+		return dateStr;
+	};
+});
 
-	toolbox.filter('UTCDateFilter', function() {
-		return function(input) {
-			var date = new Date(input);
-			var dateStr = '' + pad(date.getUTCMonth());
-			dateStr += '/' + pad(date.getUTCDate());
-			dateStr += '/' + pad(date.getUTCFullYear());
-			dateStr += ' UT';
-			return dateStr;
-		};
-	});
+toolbox.lazy.filter('DateFilter', function() {
+	return function(input) {
+		var date = new Date(input);
+		var dateStr = '' + pad(date.getMonth());
+		dateStr += '/' + pad(date.getDate());
+		dateStr += '/' + pad(date.getFullYear());
+		return dateStr;
+	};
+});
+
+toolbox.lazy.filter('UTCDateFilter', function() {
+	return function(input) {
+		var date = new Date(input);
+		var dateStr = '' + pad(date.getUTCMonth());
+		dateStr += '/' + pad(date.getUTCDate());
+		dateStr += '/' + pad(date.getUTCFullYear());
+		dateStr += ' UT';
+		return dateStr;
+	};
 });
 
 function loadAvailableReservations(scope, api) {
@@ -82,10 +84,6 @@ function loadAvailableReservations(scope, api) {
 			});
 }
 
-function pad(n) {
-	return (n < 10) ? ("0" + n) : n;
-}
-
 function buildUIAvTable(scope, elementName, paginationName) {
 	YUI()
 			.use(
@@ -106,11 +104,11 @@ function buildUIAvTable(scope, elementName, paginationName) {
 
 									var dateStr = '' + pad(date.getHours());
 									dateStr += ':' + pad(date.getMinutes());
-																		
+
 									dateStr += ' (' + pad(date.getUTCHours());
 									dateStr += ':' + pad(date.getUTCMinutes());
 									dateStr += ' UT)';
-									
+
 									o.value = dateStr;
 								}
 
@@ -124,12 +122,11 @@ function buildUIAvTable(scope, elementName, paginationName) {
 
 									var dateStr = '' + pad(date.getHours());
 									dateStr += ':' + pad(date.getMinutes());
-																		
+
 									dateStr += ' (' + pad(date.getUTCHours());
 									dateStr += ':' + pad(date.getUTCMinutes());
 									dateStr += ' UT)';
-									
-									
+
 									o.value = dateStr;
 								}
 
@@ -184,13 +181,17 @@ function buildUIAvTable(scope, elementName, paginationName) {
 					});
 }
 
-function AvailableReservationsListCtrl($gloriaAPI, $scope, $timeout, $location, $gloriaLocale) {
+function AvailableReservationsListCtrl($gloriaAPI, $scope, $timeout, $location,
+		$gloriaLocale) {
 
-	$gloriaLocale.loadResource('new/lang', 'new');
+	$scope.newReady = false;
 	
-	//$('#select-exp').tooltip('show');
-	
-	
+	$gloriaLocale.loadResource('new/lang', 'new', function() {
+		$scope.newReady = true;
+	});
+
+	// $('#select-exp').tooltip('show');
+
 	$scope.available = [];
 	$scope.slotsPerPage = 10;
 	$scope.slotSelected = false;
@@ -232,8 +233,8 @@ function AvailableReservationsListCtrl($gloriaAPI, $scope, $timeout, $location, 
 		$scope.dateSelected = false;
 		$scope.slotSelected = false;
 	};
-	
-	$scope.onTimeout = function () {
+
+	$scope.onTimeout = function() {
 		loadAvailableReservations($scope, $gloriaAPI);
 	};
 
@@ -254,8 +255,8 @@ function AvailableReservationsListCtrl($gloriaAPI, $scope, $timeout, $location, 
 		$scope.reservationDone = false;
 		$scope.reservationError = false;
 	};
-	
+
 	$scope.$on('$destroy', function() {
-		$timeout.cancel($scope.timer);		
+		$timeout.cancel($scope.timer);
 	});
 }

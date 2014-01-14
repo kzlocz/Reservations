@@ -121,9 +121,14 @@ function buildUIPendingTable(scope, elementName, paginationName) {
 					});
 }
 
-function PendingReservationsListCtrl($gloriaAPI, $scope, $timeout, $location, $gloriaLocale) {
+function PendingReservationsListCtrl($gloriaAPI, $scope, $timeout, $location,
+		$window, $gloriaLocale) {
 
-	$gloriaLocale.loadResource('pending/lang', 'pending');
+	$scope.pendingReady = false;
+	
+	$gloriaLocale.loadResource('pending/lang', 'pending', function() {
+		$scope.pendingReady = true;
+	});
 	
 	$scope.pending = [];
 	$scope.loading = true;
@@ -204,8 +209,10 @@ function PendingReservationsListCtrl($gloriaAPI, $scope, $timeout, $location, $g
 	});
 
 	$scope.go = function() {
-		$location.path('/experiments/'
-				+ $scope.selected.experiment.toLowerCase());
+
+		var url = $window.location.origin + '/'
+				+ $scope.selected.experiment.toLowerCase() + '/#?rid=' + $scope.selected.reservationId;
+		$window.location.href = url;
 	};
 
 	$scope.updateAfterCancel = function() {

@@ -1,8 +1,9 @@
 <link href="new/css/styles.css" rel="stylesheet"></link>
-<div ng-controller="AvailableReservationsListCtrl">
+<script src="js/filters.js"></script>
+<div ng-show="newReady" ng-controller="AvailableReservationsListCtrl">
 	<div class="page-header" style="border: none; margin-bottom: 10px">
 		<div class="row" style="margin-bottom: 0px">
-			<h2 style="margin-left: 18px">{{'available.header'|i18n}}</h2>
+			<h2 style="margin-left: 18px">{{'new.header'|i18n}}</h2>
 		</div>
 	</div>
 	<div class="container">
@@ -173,7 +174,7 @@
 							ng-show="reservationDone">
 							<div class="alert alert-success">
 								<strong>Done!</strong> Your new reservation has been accepted.
-								See it <a href="#/experiments/pending">here.</a>
+								See it <a href="#/pending">here.</a>
 							</div>
 						</div>
 						<br>
