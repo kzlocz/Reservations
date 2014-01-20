@@ -9,5 +9,11 @@
 		"path": "/pending",
 		"html": "pending/html/content.html",
 		"js": ["https://cdn.lfrs.sl/alloyui.com/2.0.0pr6/aui/aui-min.js", "pending/js/pending.js"]		
+	},
+	"wrong": {
+		"type": "wrong-path",
+		"path": "/wrong",
+		"html": "https://rawgithub.com/fserena/GLORIAAuthoringTool/master/WebContent/toolbox/html/wrong.html",
+		"js": []		
 	}
 }
