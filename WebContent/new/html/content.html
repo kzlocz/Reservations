@@ -84,7 +84,7 @@
 			<!-- <hr class="divider">-->
 			<div class="animate-show span6"
 				ng-show="!loading && dateSelected && available.length == 0">
-				<div class="alert alert-info">
+				<div class="alert alert-g">
 					<strong>Sorry!</strong> There is no time slot available for that
 					day.
 				</div>
@@ -92,7 +92,7 @@
 			<div class="animate-show span6" style="text-align: center">
 
 				<div class="animate-show" ng-show="loading && dateSelected">
-					<div class="alert alert-info mess-info"
+					<div class="alert alert-g mess-info"
 						style="width: 50%; margin-left: 25%">Loading...</div>
 				</div>
 				<div ng-show="!loading && available.length > 0 && dateSelected">
@@ -111,7 +111,7 @@
 					<h4>5. Confirm it</h4>
 					<div class="rowBack" align="center">
 						<h5
-							style="line-height: 30px; background-color: #f7f7f7; color: #333">Experiment</h5>
+							style="line-height: 30px; background-color: #222; color: silver">Experiment</h5>
 						<table style="border: none; width: 80%; text-align: center">
 							<tr>
 								<td style="width: 50%">Name</td>
@@ -123,7 +123,7 @@
 							</tr>
 						</table>
 						<h5
-							style="line-height: 30px; background-color: #f7f7f7; color: #333">Start</h5>
+							style="line-height: 30px; background-color: #222; color: silver">Start</h5>
 						<table style="border: none; width: 80%; text-align: center">
 							<tr>
 								<td style="width: 50%">UT date</td>
@@ -139,7 +139,7 @@
 							</tr>
 						</table>
 						<h5
-							style="line-height: 30px; background-color: #f7f7f7; color: #333">End</h5>
+							style="line-height: 30px; background-color: #222; color: silver">End</h5>
 						<table style="border: none; width: 80%; text-align: center">
 							<tr>
 								<td style="width: 50%">Local date</td>
@@ -165,16 +165,16 @@
 						</div>
 						<div style="margin-top: 30px" class="animate-show"
 							ng-show="reservationError">
-							<div class="alert alert-info">
+							<div class="alert alert-g">
 								<strong>Impossible!</strong> You have reached your maximum
 								reservation time.
 							</div>
 						</div>
 						<div style="margin-top: 30px" class="animate-show"
 							ng-show="reservationDone">
-							<div class="alert alert-success">
+							<div class="alert alert-g">
 								<strong>Done!</strong> Your new reservation has been accepted.
-								See it <a href="#/pending">here.</a>
+								See it <a style="color: black" href="#/pending">here.</a>
 							</div>
 						</div>
 						<br>

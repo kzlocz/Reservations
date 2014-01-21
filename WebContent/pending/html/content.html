@@ -9,7 +9,7 @@
 		style="position: relative">
 		<button ng-show="goButton.show" ng-click="go()"
 			tooltip-popup-delay="500" tooltip="Go!" tooltip-placement="top"
-			class="btn btn-success" style="position: absolute"
+			class="btn btn-info" style="position: absolute"
 			ng-style="goButton.style">
 			<i class="icon-play"></i>
 		</button>
@@ -22,15 +22,15 @@
 	</div>
 	<div ng-show="!loading && pending.length > 0" id="table2"
 		align="center" class="animate-show table table-hover"
-		style="cursor: pointer; color: #08C"></div>
+		style="cursor: pointer;"></div>
 	<div ng-show="loading" style="width: 30%; margin-left: 35%">
-		<div align="center" class="animate-show alert alert-info mess-info">Loading...</div>
+		<div align="center" class="animate-show alert alert-g mess-info">Loading...</div>
 	</div>
 	<div ng-show="pendingRetrieved && pending.length == 0">
-		<div class="alert alert-info animate-show"
+		<div class="alert alert-g animate-show"
 			style="width: 40%; margin-left: 30%">
 			<strong>Sorry!</strong> You don't have any reservations at this
-			moment.<br>Go and make one for you <a
+			moment.<br>Go and make one for you <a style="color: black"
 				href="#/new">here</a>.
 		</div>
 	</div>

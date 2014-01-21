@@ -1,0 +1,25 @@
+.table-header {
+	background-color: #222;
+	color: silver;
+	/*background-image: -moz-linear-gradient(top, #222, #111);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222),
+		to(#111));
+	background-image: -webkit-linear-gradient(top, #222, #111);
+	background-image: -o-linear-gradient(top, #222, #111);
+	background-image: linear-gradient(to bottom, #222, #111);*/
+	border-bottom: none;
+}
+
+.table td {
+	padding: 8px;
+	line-height: 20px;
+	text-align: left;
+	vertical-align: top;
+	border-top: 1px solid rgba(221, 221, 221, 0.19);
+}
+
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+  color: #D3AF7B;
+  background-color: rgba(20, 20, 20, 0.55);
+}
