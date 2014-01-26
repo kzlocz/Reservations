@@ -1,3 +1,18 @@
 {
-	"header" : "My reservations"
+	"header" : "Your reservation",
+	"intro": {
+		"p1": "All observing time you get will be part of your pending reservations until they have expired. Remember that time is exclusively for you, nobody else can use it at once. As you know, by now the maximum number of reservations that you can accumulate is 2, but could be simultaneous!",
+		"p2": "This panel allows you to manage your reservations, so you can review and cancel them, and as soon as they are active, access the experiment and control the telescope. To do this, simply click the reservation interests you and see your options. It is important that you consider that when the time comes to start your experiment, it is possible that the weather does not allow the telescope to observe."
+	},
+	"loading": "Loading",
+	"nores": "You do not have any pending reservation now. Go and get one for you",
+	"here": "here",
+	"go": "Go",
+	"cancel": "Cancel",
+	"table": {
+		"experiment": "Experiment",
+		"begin": "Begin",
+		"end": "End",
+		"telescopes": "Telescopes"
+	}
 }

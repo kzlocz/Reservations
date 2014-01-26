@@ -1,3 +1,64 @@
 {
-	"header" : "Haz una reserva"	
+	"header" : "Haz una reserva",
+	"intro": "Para que puedas usar un telescopio es necesario que reserves tiempo de observación. De esta forma, cuando llegue el momento, tendrás el telescopio sólo para ti. Cada propietario establece el horario de disponibilidad de sus telescopios. Lo que hacemos nosotros es ofrecerte intervalos de tiempo de 15 minutos dentro de este horario.",
+	"phases": {
+		"one": {
+			"header": "1. Elige un experimento",
+			"experiments" : {
+				"solar": {
+					"name": "Experimento solar",
+					"desc": "Explora el Sol y sus manchas"
+				},
+				"night": {
+					"name": "Experimento nocturno",
+					"desc": "Observa el cielo nocturno"
+				}
+			}
+		},
+		"two": {
+			"header": "2. Elige un telescopio",
+			"telescopes": {
+				"tads": {
+					"name": "TADs",
+					"desc": "Tenerife, España (IAC)"
+				},
+				"bart": {
+					"name": "BART",
+					"desc": "Ondrejov, República Checa (AUAV)"
+				}
+			}
+		},
+		"three": {
+			"header": "3. Selecciona un día",
+			"p1": "Una vez elegido tu experimento y el telescopio, el siguiente paso es elegir el día concreto en que quieres realizarlo.",
+			"p2": "Con la intención de que todos podáis conseguir tiempo, el máximo de reservas que podrás acumular son 2 en un plazo de 7 días. Iremos equilibrando esta restricción según vayamos aprendiendo de la experiencia con vosotros.",
+			"p3": "Haz click en uno de los días disponibles para continuar."
+		},
+		"four": {
+			"header": "4. Escoge un intervalo",
+			"p1": "A la izquierda te aparecen los intervalos de tiempo que hay disponibles para el día seleccionado. Haz click en uno de ellos para ver el resumen de tu reserva.",
+			"p2": "Si todo es correcto, ya sólo te queda solicitarla y esperar la confirmación.",
+			"loading": "Cargando",
+			"noslot": "No hay tiempo de observación disponible para ese día",
+			"notime": "Has alcanzado el límite máximo de tiempo",
+			"done": "Tu nueva reserva ha sido aceptada. Revísala",
+			"here": "aquí",
+			"summary": {
+				"title": "Resumen de la reserva",
+				"what": {
+					"title": "¿Qué?",
+					"text": "Estás intentando reservar tiempo del @{p1}@ para usarlo con el experimento @{p2}@."
+				},
+				"when": {
+					"title": "¿Cuándo?",
+					"text": "Quieres solicitar tiempo entre el @{p1}@ UT y el @{p2}@ UT."
+				},
+				"request": "Solicitar"
+			},
+			"table": {
+				"begin": "Comienzo",
+				"end": "Fin"
+			}
+		}
+	}
 }

@@ -1,187 +1,146 @@
 <link href="new/css/styles.css" rel="stylesheet"></link>
 <script src="js/filters.js"></script>
-<div ng-show="newReady" ng-controller="AvailableReservationsListCtrl">
+<div ng-controller="AvailableReservationsListCtrl" ng-show="ready">
 	<div class="page-header" style="border: none; margin-bottom: 10px">
 		<div class="row" style="margin-bottom: 0px">
 			<h2 style="margin-left: 18px">{{'new.header'|i18n}}</h2>
 		</div>
 	</div>
 	<div class="container">
-		<div class="container">
-			<div style="text-align: center; float: left; width: 30%;">
-				<!-- <div id="select-exp" class="settings-button"
-					jtooltip="{title: 'Select an experiment', placement: 'top'}"></div>-->
-				<h4>1. Select an experiment</h4>
-				<ul class="thumbnails">
-					<li style="float: none;">
-						<div class="thumbnail pcard"
-							style="background-image: url(new/img/sun.jpg); width: 70%; height: 100px;"
-							ng-click="experimentClicked('SOLAR')"
-							ng-class="{highCard: experimentSelected == 'SOLAR'}">
-							<h5>"SOLAR"</h5>
-							<p>
-								<i>Explore the Sun</i>
-							</p>
-						</div>
-					</li>
-					<li style="float: none;">
-						<div class="thumbnail pcard" ng-click="experimentClicked('NIGHT')"
-							ng-class="{highCard: experimentSelected == 'NIGHT'}"
-							style="width: 70%; height: 100px; background-image: url(https://scontent-b.xx.fbcdn.net/hphotos-prn2/1393169_10152085662121869_26816648_n.jpg);">
-							<h5>"NIGHT"</h5>
-							<p>
-								<i>Explore the Night Sky</i>
-							</p>
-						</div>
-					</li>
-				</ul>
-			</div>
+		<p>{{'new.intro'|i18n}}</p>
+		<div>
+			<h3 style="margin-bottom: 15px; margin-top: 20px; font-size: 23px">{{'new.phases.one.header'|i18n}}</h3>
+			<ul class="thumbnails">
+				<li class="span6">
+					<div class="experiment-banner pcard"
+						style="background-image: url(new/img/sun-alpha.png);"
+						ng-click="experimentClicked('SOLAR')"
+						ng-class="{highCard: experimentSelected == 'SOLAR'}">
+						<h4 style="margin-top: 0px">{{'new.phases.one.experiments.solar.name'|i18n}}</h4>
+						{{'new.phases.one.experiments.solar.desc'|i18n}}
+					</div>
+				</li>
+				<li class="span6">
+					<div class="experiment-banner pcard"
+						style="background-image: url(new/img/night-alpha.png);"
+						ng-click="experimentClicked('NIGHT')"
+						ng-class="{highCard: experimentSelected == 'NIGHT'}">
+						<h4 style="margin-top: 0px">{{'new.phases.one.experiments.night.name'|i18n}}</h4>
+						{{'new.phases.one.experiments.night.desc'|i18n}}
+					</div>
+				</li>
+			</ul>
+		</div>
 
-			<div ng-show="experimentSelected != null" class="animate-show"
-				style="text-align: center; float: left; width: 30%;">
-				<h4>2. Select a telescope</h4>
-				<ul class="thumbnails">
-					<li class="animate-show" style="float: none;"
-						ng-show="experimentSelected == 'SOLAR'">
-						<div class="thumbnail tilt pcard"
-							style="height: 100px; background-image: url(http://gloria-project.eu/wp-content/uploads/2013/11/t13.jpg); width: 70%;"
-							ng-click="telescopeClicked('TAD')"
-							ng-class="{highCard: telescopeSelected == 'TAD'}">
-							<h5>"TAD"</h5>
-							<p>
-								<i>Tenerife, Spain</i>
-							</p>
-						</div>
-					</li>
-					<li class="animate-show" style="float: none;"
-						ng-show="experimentSelected == 'NIGHT'">
-						<div class="thumbnail tilt pcard"
-							style="height: 100px; background-image: url(http://gloria-project.eu/wp-content/uploads/2012/05/T07-BART.png); width: 70%;"
-							ng-click="telescopeClicked('BART')"
-							ng-class="{highCard: telescopeSelected == 'BART'}">
-							<h5>"BART"</h5>
-							<p>
-								<i>Ondrejov, Czech Republic</i>
-							</p>
-						</div>
-					</li>
-				</ul>
-			</div>
+		<div ng-show="experimentSelected != null" class="animate-show">
+			<h3 style="margin-bottom: 15px; font-size: 23px">{{'new.phases.two.header'|i18n}}</h3>
+			<ul class="thumbnails">
+				<li ng-show="experimentSelected == 'SOLAR'" class="span6">
+					<div class="experiment-banner pcard"
+						style="background-image: url(new/img/tads-alpha.png)"
+						ng-click="telescopeClicked('TAD')"
+						ng-class="{highCard: telescopeSelected == 'TAD'}">
+						<h4 style="margin-top: 0px">{{'new.phases.two.telescopes.tads.name'|i18n}}</h4>
+						{{'new.phases.two.telescopes.tads.desc'|i18n}}
+					</div>
+				</li>
+				<li ng-show="experimentSelected == 'NIGHT'" class="span6">
+					<div class="experiment-banner pcard"
+						style="background-image: url(new/img/bart-alpha.png);"
+						ng-click="telescopeClicked('BART')"
+						ng-class="{highCard: telescopeSelected == 'BART'}">
+						<h4 style="margin-top: 0px">{{'new.phases.two.telescopes.bart.name'|i18n}}</h4>
+						{{'new.phases.two.telescopes.bart.desc'|i18n}}
+					</div>
+				</li>
+			</ul>
+		</div>
 
-			<div class="animate-show"
-				style="text-align: center; float: left; width: 40%;"
-				ng-show="experimentSelected != null && telescopeSelected != null"
-				ng-controller="DatepickerCtrl">
-				<h4>3. Choose a date</h4>
-				<div style="color: silver">
-					<datepicker align="center" class="rowBack" style="color: silver"
-						ng-model="dt" min="current" max="'2015-06-22'"
-						show-weeks="showWeeks" date-disabled="disabled(date, mode)"></datepicker>
+		<div class="animate-show"
+			ng-show="experimentSelected != null && telescopeSelected != null"
+			ng-controller="DatepickerCtrl">
+			<h3 style="margin-bottom: 15px; font-size: 23px">{{'new.phases.three.header'|i18n}}</h3>
+			<div class="row" style="margin-left: 0px">
+				<div class="span5"
+					style="color: silver; margin-bottom: 20px; margin-left: 0px">
+					<datepicker class="rowBack" style="color: silver" ng-model="dt"
+						min="current" max="week" show-weeks="showWeeks"
+						date-disabled="disabled(date, mode)"></datepicker>
+				</div>
+
+				<div class="span7">
+					<p>{{'new.phases.three.p1'|i18n}}</p>
+					<p>{{'new.phases.three.p2'|i18n}}</p>
+					<p>{{'new.phases.three.p3'|i18n}}</p>
 				</div>
 			</div>
 		</div>
-		<div class="container" ng-show="dateSelected">
-			<!-- <hr class="divider">-->
+
+		<div ng-show="dateSelected">
+			<h3 style="margin-bottom: 15px; font-size: 23px">{{'new.phases.four.header'|i18n}}</h3>
 			<div class="animate-show span6"
 				ng-show="!loading && dateSelected && available.length == 0">
-				<div class="alert alert-g">
-					<strong>Sorry!</strong> There is no time slot available for that
-					day.
-				</div>
+				<div class="alert alert-g">{{'new.phases.four.noslot'|i18n}}
+					day.</div>
 			</div>
-			<div class="animate-show span6" style="text-align: center">
-
-				<div class="animate-show" ng-show="loading && dateSelected">
-					<div class="alert alert-g mess-info"
-						style="width: 50%; margin-left: 25%">Loading...</div>
-				</div>
+			<div class="animate-show span5"
+				style="text-align: center; margin-left: 0px">
+				<div ng-show="loading && dateSelected"
+					class="animate-show alert alert-g mess-info"
+					style="width: 50%; margin-right: 0px; margin-left: 15%; margin-top: 20px;">{{'new.phases.four.loading'|i18n}}...</div>
 				<div ng-show="!loading && available.length > 0 && dateSelected">
-					<h4 id="timeslotTitle">4. Pick out a timeslot</h4>
-					<div id="table" align="center" class="table table-hover"
-						style="cursor: pointer; color: #08C;"></div>
-					<div id="pagination" class="pagination-centered">
+					<div id="table" class="table table-hover"
+						style="cursor: pointer; color: #08C; margin-bottom: 0px; width: 350px"></div>
+					<div id="pagination" class="pagination pagination-centered"
+						style="text-align: center; margin-top: 0px; width: 350px">
 						<ul class="aui-pagination-content">
 						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="span5">
-				<div class="animate-show" ng-show="slotSelected"
-					style="padding-bottom: 3px; text-align: center">
-					<h4>5. Confirm it</h4>
-					<div class="rowBack" align="center">
-						<h5
-							style="line-height: 30px; background-color: #222; color: silver">Experiment</h5>
-						<table style="border: none; width: 80%; text-align: center">
-							<tr>
-								<td style="width: 50%">Name</td>
-								<td><strong>{{experimentSelected}}</strong></td>
-							</tr>
-							<tr>
-								<td style="width: 50%">Telescope</td>
-								<td><strong>{{telescopeSelected}}</strong></td>
-							</tr>
-						</table>
-						<h5
-							style="line-height: 30px; background-color: #222; color: silver">Start</h5>
-						<table style="border: none; width: 80%; text-align: center">
-							<tr>
-								<td style="width: 50%">UT date</td>
-								<td><strong>{{slot.begin | UTCDateFilter}}</strong></td>
-							</tr>
-							<tr>
-								<td style="width: 50%">Local time</td>
-								<td><strong>{{slot.begin | TimeFilter}}</strong></td>
-							</tr>
-							<tr>
-								<td style="width: 50%">UT time</td>
-								<td><strong>{{slot.begin | UTCTimeFilter}}</strong></td>
-							</tr>
-						</table>
-						<h5
-							style="line-height: 30px; background-color: #222; color: silver">End</h5>
-						<table style="border: none; width: 80%; text-align: center">
-							<tr>
-								<td style="width: 50%">Local date</td>
-								<td><strong>{{slot.end | DateFilter}}</strong></td>
-							</tr>
-							<tr>
-								<td style="width: 50%">UT date</td>
-								<td><strong>{{slot.end | UTCDateFilter}}</strong></td>
-							</tr>
-							<tr>
-								<td style="width: 50%">Local time</td>
-								<td><strong>{{slot.end | TimeFilter}}</strong></td>
-							</tr>
-							<tr>
-								<td style="width: 50%">UT time</td>
-								<td><strong>{{slot.end | UTCTimeFilter}}</strong></td>
-							</tr>
-
-						</table>
-						<div ng-show="!reservationDone && !reservationError"
-							align="center" style="margin-top: 1em; margin-down: 1em;">
-							<button ng-click="reserve()" class="btn btn-info">Request</button>
-						</div>
-						<div style="margin-top: 30px" class="animate-show"
-							ng-show="reservationError">
-							<div class="alert alert-g">
-								<strong>Impossible!</strong> You have reached your maximum
-								reservation time.
+			<div class="animate-show span7" ng-show="dateSelected">
+				<p>{{'new.phases.four.p1'|i18n}}</p>
+				<p>{{'new.phases.four.p2'|i18n}}</p>
+				<div id="summary" class="animate-show" ng-show="slotSelected"
+					style="background-color: #0F0F0F; margin-top: 20px; overflow: hidden; max-height: 300px">
+					<div class="row" style="margin-left: 0px">
+						<div ng-style="summaryStyle"
+							style="width: 215px; float: left; height: 300px"></div>
+						<div
+							style="float: left; padding: 20px; width: 285px; padding-bottom: 15px;">
+							<h3 style="margin-top: 0px; margin-bottom: 20px">{{'new.phases.four.summary.title'|i18n}}</h3>
+							<h5 style="color: #FF9900; margin-bottom: 5px">{{'new.phases.four.summary.what.title'|i18n}}</h5>
+							<p style="font-size: 0.85em; line-height: 15px">{{'new.phases.four.summary.what.text'|i18n:telescopeSelected:
+								experimentSelected}}</p>
+							<h5 style="color: #FF9900; margin-bottom: 5px">{{'new.phases.four.summary.when.title'|i18n}}</h5>
+							<p style="font-size: 0.85em; line-height: 15px">
+								{{'new.phases.four.summary.when.text'|i18n:(slot.begin | utc |
+								date:'completeDate'):(slot.end | utc | date:'completeDate')}}</p>
+							<div ng-show="!reservationDone && !reservationError"
+								align="center" style="padding-top: 30px">
+								<button ng-click="reserve()" class="btn btn-info">{{'new.phases.four.summary.request'|i18n}}</button>
+							</div>
+							<div
+								style="padding-top: 30px; font-size: 0.9em; line-height: 15px; color: #D3AF7B"
+								class="animate-show" ng-show="reservationError">
+								<i class="icon-remove"
+									style="float: left; background-color: #D3AF7B; margin-right: 5px; margin-top: 0px"></i>
+								<div style="padding-left: 20px">{{'new.phases.four.notime'|i18n}}</div>
+							</div>
+							<div
+								style="padding-top: 30px; font-size: 0.9em; line-height: 15px; color: #D3AF7B"
+								class="animate-show" ng-show="reservationDone">
+								<i class="icon-ok"
+									style="float: left; background-color: #D3AF7B; margin-right: 5px; margin-top: 0px"></i>
+								<div style="padding-left: 20px">
+									{{'new.phases.four.done'|i18n}} <a style="color: #D3AF7B"
+										href="#/pending">{{'new.phases.four.here'|i18n}}</a>
+								</div>
 							</div>
 						</div>
-						<div style="margin-top: 30px" class="animate-show"
-							ng-show="reservationDone">
-							<div class="alert alert-g">
-								<strong>Done!</strong> Your new reservation has been accepted.
-								See it <a style="color: black" href="#/pending">here.</a>
-							</div>
-						</div>
-						<br>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-

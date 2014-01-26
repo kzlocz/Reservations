@@ -32,7 +32,7 @@ toolbox.lazy.filter('TimeFilter', function() {
 toolbox.lazy.filter('DateFilter', function() {
 	return function(input) {
 		var date = new Date(input);
-		var dateStr = '' + pad(date.getMonth());
+		var dateStr = '' + pad(date.getMonth() + 1);
 		dateStr += '/' + pad(date.getDate());
 		dateStr += '/' + pad(date.getFullYear());
 		return dateStr;
@@ -42,7 +42,7 @@ toolbox.lazy.filter('DateFilter', function() {
 toolbox.lazy.filter('UTCDateFilter', function() {
 	return function(input) {
 		var date = new Date(input);
-		var dateStr = '' + pad(date.getUTCMonth());
+		var dateStr = '' + pad(date.getUTCMonth() + 1);
 		dateStr += '/' + pad(date.getUTCDate());
 		dateStr += '/' + pad(date.getUTCFullYear());
 		dateStr += ' UT';
@@ -84,7 +84,7 @@ function loadAvailableReservations(scope, api) {
 			});
 }
 
-function buildUIAvTable(scope, elementName, paginationName) {
+function buildUIAvTable(scope, elementName, paginationName, filter) {
 	YUI()
 			.use(
 					'aui-datatable',
@@ -95,7 +95,7 @@ function buildUIAvTable(scope, elementName, paginationName) {
 							// boundingBox : '#table',
 							columns : [ {
 								key : 'begin',
-								label : 'Begin',
+								label : filter('i18n')('new.phases.four.table.begin'),
 								sortable : 'true',
 								formatter : function(o) {
 									o.rowClass = 'rowBack';
@@ -114,7 +114,7 @@ function buildUIAvTable(scope, elementName, paginationName) {
 
 							}, {
 								key : 'end',
-								label : 'End',
+								label : filter('i18n')('new.phases.four.table.end'),
 								sortable : 'true',
 								formatter : function(o) {
 									o.rowClass = 'rowBack';
@@ -182,13 +182,15 @@ function buildUIAvTable(scope, elementName, paginationName) {
 }
 
 function AvailableReservationsListCtrl($gloriaAPI, $scope, $timeout, $location,
-		$gloriaLocale) {
+		$gloriaLocale, $filter) {
 
-	$scope.newReady = false;
+	$scope.ready = false;
 	
 	$gloriaLocale.loadResource('new/lang', 'new', function() {
-		$scope.newReady = true;
+		$scope.ready = true;
 	});
+	
+	$scope.summaryStyle = {};
 
 	// $('#select-exp').tooltip('show');
 
@@ -201,7 +203,7 @@ function AvailableReservationsListCtrl($gloriaAPI, $scope, $timeout, $location,
 
 	$scope.date = null;
 
-	buildUIAvTable($scope, 'table', 'pagination');
+	buildUIAvTable($scope, 'table', 'pagination', $filter);
 
 	$scope.$watch('date', function() {
 		if ($scope.date != null && $scope.telescopeSelected) {
@@ -246,6 +248,11 @@ function AvailableReservationsListCtrl($gloriaAPI, $scope, $timeout, $location,
 		$scope.dateSelected = false;
 		$scope.reservationDone = false;
 		$scope.reservationError = false;
+		if (experiment == 'SOLAR') {
+			$scope.summaryStyle.backgroundImage = 'url(new/img/sun-summary.jpg)';
+		} else {
+			$scope.summaryStyle.backgroundImage = 'url(new/img/night-summary.jpg)';
+		}
 	};
 
 	$scope.telescopeClicked = function(rt) {

@@ -5,18 +5,22 @@
 			<h2 style="margin-left: 18px">{{'pending.header'|i18n}}</h2>
 		</div>
 	</div>
+	<div style="margin-bottom: 35px">
+		<p>{{'pending.intro.p1'|i18n}}.</p>
+		<p>{{'pending.intro.p2'|i18n}}.</p>
+	</div>
 	<div class="animate-show" ng-show="reservationSelected"
 		style="position: relative">
 		<button ng-show="goButton.show" ng-click="go()"
-			tooltip-popup-delay="500" tooltip="Go!" tooltip-placement="top"
-			class="btn btn-info" style="position: absolute"
-			ng-style="goButton.style">
+			tooltip-popup-delay="500" tooltip="{{'pending.go' |i18n}}"
+			tooltip-placement="top" class="btn btn-info"
+			style="position: absolute" ng-style="goButton.style">
 			<i class="icon-play"></i>
 		</button>
 		<button ng-show="cancelButton.show" ng-click="cancel()"
-			tooltip-popup-delay="500" tooltip="Cancel" tooltip-placement="top"
-			ng-style="cancelButton.style" class="btn btn-danger"
-			style="position: absolute">
+			tooltip-popup-delay="500" tooltip="{{'pending.cancel' |i18n}}"
+			tooltip-placement="top" ng-style="cancelButton.style"
+			class="btn btn-danger" style="position: absolute">
 			<i class="icon-remove"></i>
 		</button>
 	</div>
@@ -24,14 +28,14 @@
 		align="center" class="animate-show table table-hover"
 		style="cursor: pointer;"></div>
 	<div ng-show="loading" style="width: 30%; margin-left: 35%">
-		<div align="center" class="animate-show alert alert-g mess-info">Loading...</div>
+		<div align="center" class="animate-show alert alert-g mess-info">{{'pending.loading'
+			|i18n}}...</div>
 	</div>
 	<div ng-show="pendingRetrieved && pending.length == 0">
 		<div class="alert alert-g animate-show"
 			style="width: 40%; margin-left: 30%">
-			<strong>Sorry!</strong> You don't have any reservations at this
-			moment.<br>Go and make one for you <a style="color: black"
-				href="#/new">here</a>.
+			{{'pending.nores' |i18n}}<a style="color: black" href="#/new">
+				{{'pending.here' |i18n}}</a>.
 		</div>
 	</div>
 	<div ng-show="pending.length > 0 && !loading" id="pagination2"

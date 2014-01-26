@@ -16,6 +16,7 @@ function datepickerBase(scope, timeout) {
 	};
 
 	scope.current = new Date();
+	scope.week = new Date(scope.current.getTime() + 518400000);
 
 	// Disable weekend selection
 	scope.disabled = function(date, mode) {
@@ -25,6 +26,8 @@ function datepickerBase(scope, timeout) {
 	scope.toggleMin = function() {
 		scope.minDate = (scope.minDate) ? null : new Date();
 	};
+
+
 	scope.toggleMin();
 
 	scope.open = function() {
@@ -46,11 +49,11 @@ function DatepickerCtrl($scope, $timeout) {
 
 	$scope.$watch('dt', function() {
 		if ($scope.dt != undefined && $scope.dt != null) {
-			//$scope.$emit('dateSelected', $scope.dt);
+			// $scope.$emit('dateSelected', $scope.dt);
 			$scope.$parent.date = $scope.dt;
 		}
 	});
 
-	$scope.$on('$destroy', function() {		
+	$scope.$on('$destroy', function() {
 	});
 }

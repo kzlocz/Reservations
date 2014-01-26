@@ -31,7 +31,7 @@ function loadPendingReservations(scope, api) {
 	});
 }
 
-function buildUIPendingTable(scope, elementName, paginationName) {
+function buildUIPendingTable(scope, elementName, paginationName, filter) {
 	YUI()
 			.use(
 					'aui-datatable',
@@ -45,10 +45,10 @@ function buildUIPendingTable(scope, elementName, paginationName) {
 								label : '#'
 							}, {
 								key : 'experiment',
-								label : 'Experiment'
+								label : filter('i18n')('pending.table.experiment')
 							}, {
 								key : 'begin',
-								label : 'Begin',
+								label : filter('i18n')('pending.table.begin'),
 								sortable : 'true',
 								formatter : function(o) {
 									return new Date(o.value).toUTCString();
@@ -56,7 +56,7 @@ function buildUIPendingTable(scope, elementName, paginationName) {
 
 							}, {
 								key : 'end',
-								label : 'End',
+								label : filter('i18n')('pending.table.end'),
 								sortable : 'true',
 								formatter : function(o) {
 									o.rowClass = 'rowBack';
@@ -65,7 +65,7 @@ function buildUIPendingTable(scope, elementName, paginationName) {
 
 							}, {
 								key : 'telescopes',
-								label : 'Telescopes'
+								label : filter('i18n')('pending.table.telescopes')
 							} ],
 							recordset : scope.pending.slice(0, 10)
 						});
@@ -122,7 +122,7 @@ function buildUIPendingTable(scope, elementName, paginationName) {
 }
 
 function PendingReservationsListCtrl($gloriaAPI, $scope, $timeout, $location,
-		$window, $gloriaLocale) {
+		$window, $gloriaLocale, $filter) {
 
 	$scope.pendingReady = false;
 	
@@ -146,7 +146,7 @@ function PendingReservationsListCtrl($gloriaAPI, $scope, $timeout, $location,
 
 	$scope.$watch('pagesArray', function() {
 		if (!$scope.tableBuilt && $scope.pending.length > 0) {
-			buildUIPendingTable($scope, 'table', 'pagination');
+			buildUIPendingTable($scope, 'table', 'pagination', $filter);
 			$scope.tableBuilt = true;
 		}
 	});
@@ -211,7 +211,7 @@ function PendingReservationsListCtrl($gloriaAPI, $scope, $timeout, $location,
 	$scope.go = function() {
 
 		var url = $window.location.origin + '/'
-				+ $scope.selected.experiment.toLowerCase() + '/#?rid=' + $scope.selected.reservationId;
+				+ $scope.selected.experiment.toLowerCase() + '/#/view?rid=' + $scope.selected.reservationId;
 		$window.location.href = url;
 	};
 
