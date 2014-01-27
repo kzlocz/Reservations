@@ -1,0 +1,64 @@
+{
+	"header" : "Fare una prenotazione",
+	"intro": "Per utilizzare un telescopio è necessario prenotarlo. In questo modo quando sarà il momento avrai il telescopio tutto per te. Ciascun proprietario di telescopio fornisce una schedula con la disponibilità di tempo. Quello che facciamo è suddividere tale tempo in intervalli da 15 minuti prenotabili dalla comunità.",
+	"phases": {
+		"one": {
+			"header": "1. Selezionare un esperimento",
+			"experiments" : {
+				"solar": {
+					"name": "Esperimento sul Sole",
+					"desc": "Esplora il Sole e le sue macchie"
+				},
+				"night": {
+					"name": "Esperimento notturno",
+					"desc": "Guarda il cielo durante la notte"
+				}
+			}
+		},
+		"two": {
+			"header": "2. Select a telescope",
+			"telescopes": {
+				"tads": {
+					"name": "TADs",
+					"desc": "Tenerife, Spagna (IAC)"
+				},
+				"bart": {
+					"name": "BART",
+					"desc": "Ondrejov, Repubblica Ceca (AUAV)"
+				}
+			}
+		},
+		"three": {
+			"header": "3. Scegli una data",
+			"p1": "Una volta scelti esperimento e telescopio, il passo successivo è quello di scegliere il giorno specifico in cui eseguire l'esperimento.",
+			"p2": "Con l'intenzione che tutti possano avere tempo, il numero massimo di prenotazioni accumulabili sono 2 in 7 giorni. Nel tempo bilanceremo meglio questa restrizione sulla base alle richieste.",
+			"p3": "Scegliere uno dei giorni disponibili per continuare."
+		},
+		"four": {
+			"header": "4. Scegli l'intervallo temporale",
+			"p1": "A sinistra compariranno gli intervalli di tempo disponibili nel giorno selezionato. Selezionane uno per vedere il riepilogo della tua prenotazione.",
+			"p2": "Se tutto è corretto devi solo inviare la richiesta e aspettare la conferma.",
+			"loading": "Loading",
+			"noslot": "There is no time slot available for that day",
+			"notime": "You have reached your maximum observing time",
+			"done": "Your new reservation has been accepted. Check it",
+			"here": "here",
+			"summary": {
+				"title": "Riepilo prenotazione",
+				"what": {
+					"title": "Che cosa?",
+					"text": "Stai prenotando del tempo per utilizzare il telescopio @{p1}@ con l'esperimento @{p2}@." 
+				},
+				"when": {
+					"title": "Quando?",
+					"text": "Hai chiesto l'intervallo di tempo fra le @{p1}@ UT e le @{p2}@ UT."
+				},
+				"request": "Invia Richiesta"
+			},
+			"table": {
+				"begin": "Begin",
+				"end": "End"
+			}
+		}
+	}
+}
