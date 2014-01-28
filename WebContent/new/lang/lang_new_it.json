@@ -1,6 +1,6 @@
 {
 	"header" : "Fare una prenotazione",
-	"intro": "Per utilizzare un telescopio è necessario prenotarlo. In questo modo quando sarà il momento avrai il telescopio tutto per te. Ciascun proprietario di telescopio fornisce una schedula con la disponibilità di tempo. Quello che facciamo è suddividere tale tempo in intervalli da 15 minuti prenotabili dalla comunità.",
+"intro": "Per utilizzare un telescopio è necessario prenotarlo. In questo modo quando sarà il momento avrai il telescopio tutto per te. Ciascun proprietario di telescopio fornisce una schedula con la disponibilità di tempo. Quello che facciamo è suddividere tale tempo in intervalli da 15 minuti prenotabili dalla comunità.",
 	"phases": {
 		"one": {
 			"header": "1. Selezionare un esperimento",
@@ -11,7 +11,7 @@
 				},
 				"night": {
 					"name": "Esperimento notturno",
-					"desc": "Guarda il cielo durante la notte"
+					"desc": "Guarda il cielo notturno"
 				}
 			}
 		},
@@ -37,14 +37,14 @@
 		"four": {
 			"header": "4. Scegli l'intervallo temporale",
 			"p1": "A sinistra compariranno gli intervalli di tempo disponibili nel giorno selezionato. Selezionane uno per vedere il riepilogo della tua prenotazione.",
-			"p2": "Se tutto è corretto devi solo inviare la richiesta e aspettare la conferma.",
-			"loading": "Loading",
-			"noslot": "There is no time slot available for that day",
-			"notime": "You have reached your maximum observing time",
-			"done": "Your new reservation has been accepted. Check it",
-			"here": "here",
+			"p2": "Se è tutto corretto devi solo inviare la richiesta e aspettare la conferma.",
+                        "loading": "Caricamento in corso",
+                        "noslot": "Non c'è nessun intervallo di tempo disponibile per quel giorno",
+                        "notime": "Hai raggiunto il limite massimo di tempo osservativo",
+                        "done": "La tua nuova prenotazione è stata accettata. Controlla",
+                        "here": "qui",
 			"summary": {
-				"title": "Riepilo prenotazione",
+				"title": "Riepilogo prenotazione",
 				"what": {
 					"title": "Che cosa?",
 					"text": "Stai prenotando del tempo per utilizzare il telescopio @{p1}@ con l'esperimento @{p2}@." 
@@ -55,10 +55,11 @@
 				},
 				"request": "Invia Richiesta"
 			},
-			"table": {
-				"begin": "Begin",
-				"end": "End"
-			}
+            "table": {
+                    "begin": "Inizio",
+                    "end": "Fine"
+            }
+
 		}
 	}
 }
