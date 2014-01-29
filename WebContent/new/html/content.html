@@ -78,16 +78,17 @@
 
 		<div ng-show="dateSelected">
 			<h3 style="margin-bottom: 15px; font-size: 23px">{{'new.phases.four.header'|i18n}}</h3>
-			<div class="animate-show span6"
-				ng-show="!loading && dateSelected && available.length == 0">
-				<div class="alert alert-g">{{'new.phases.four.noslot'|i18n}}
-					day.</div>
-			</div>
 			<div class="animate-show span5"
 				style="text-align: center; margin-left: 0px">
 				<div ng-show="loading && dateSelected"
 					class="animate-show alert alert-g mess-info"
 					style="width: 50%; margin-right: 0px; margin-left: 15%; margin-top: 20px;">{{'new.phases.four.loading'|i18n}}...</div>
+				<div class="animate-show"
+					ng-show="!loading && dateSelected && available.length == 0"
+					style="width: 100%; margin-right: 0px; margin-top: 20px">
+					<div class="alert alert-g">{{'new.phases.four.noslot'|i18n}}
+						day.</div>
+				</div>
 				<div ng-show="!loading && available.length > 0 && dateSelected">
 					<div id="table" class="table table-hover"
 						style="cursor: pointer; color: #08C; margin-bottom: 0px; width: 350px"></div>
@@ -97,6 +98,7 @@
 						</ul>
 					</div>
 				</div>
+
 			</div>
 			<div class="animate-show span7" ng-show="dateSelected">
 				<p>{{'new.phases.four.p1'|i18n}}</p>
