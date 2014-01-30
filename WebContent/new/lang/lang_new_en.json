@@ -1,64 +1,64 @@
 {
-	"header" : "Make a reservation",
-	"intro": "So you can use a telescope observing time booking is necessary. Thus, when the time comes, you will have the telescope just for you. Each owner sets the schedule availability of its telescopes. What we do is to provide intervals of 15 minutes during these hours.",
-	"phases": {
-		"one": {
-			"header": "1. Select an experiment",
-			"experiments" : {
-				"solar": {
-					"name": "Solar experiment",
-					"desc": "Explore the Sun and its spots"
-				},
-				"night": {
-					"name": "Night experiment",
-					"desc": "Watch the night sky"
-				}
-			}
-		},
-		"two": {
-			"header": "2. Select a telescope",
-			"telescopes": {
-				"tads": {
-					"name": "TADs",
-					"desc": "Tenerife, Spain (IAC)"
-				},
-				"bart": {
-					"name": "BART",
-					"desc": "Ondrejov, Czech Republic (AUAV)"
-				}
-			}
-		},
-		"three": {
-			"header": "3. Choose a date",
-			"p1": "Once you have chosen your experiment and the telescope, the next step is to choose the specific day when you want to run it.",
-			"p2": "With the intention that everyone can get time, the maximum number of reservations that you can accumulate are 2 within 7 days. We will be balancing this restriction as we go learning from you.",
-			"p3": "Click on one of the days available to continue."
-		},
-		"four": {
-			"header": "4. Pick out a timeslot",
-			"p1": "To the left will appear timeslots that are available for the selected day. Click on one to see a summary of your reservation.",
-			"p2": "If everything is correct, you just have to apply and wait for confirmation.",
-			"loading": "Loading",
-			"noslot": "There is no time slot available for that day",
-			"notime": "You have reached your maximum observing time",
-			"done": "Your new reservation has been accepted. Check it",
-			"here": "here",
-			"summary": {
-				"title": "Reservation summary",
-				"what": {
-					"title": "What?",
-					"text": "You are trying to book time to use @{p1}@ with the @{p2}@ experiment."
-				},
-				"when": {
-					"title": "When?",
-					"text": "Want to request time between @{p1}@ UT and @{p2}@ UT."
-				},
-				"request": "Request"
-			},
-			"table": {
-				"begin": "Begin",
-				"end": "End"
-			}
-		}
-	}
+    "header": "Make a reservation",
+    "intro": "In order use a telescope's observing time you must make a booking. Then, when the time comes, you will have the telescope all to yourself. Each telescope owner sets the availability of their telescope. We then allocate intervals of 15 minutes during the available times.",
+    "phases": {
+        "one": {
+            "header": "1. Select an experiment",
+            "experiments": {
+                "solar": {
+                    "name": "Solar experiment",
+                    "desc": "Explore the Sun and its spots"
+                },
+                "night": {
+                    "name": "Night experiment",
+                    "desc": "Watch the night sky"
+                }
+            }
+        },
+        "two": {
+            "header": "2. Select a telescope",
+            "telescopes": {
+                "tads": {
+                    "name": "TADs",
+                    "desc": "Tenerife, Spain (IAC)"
+                },
+                "bart": {
+                    "name": "BART",
+                    "desc": "Ondrejov, Czech Republic (AUAV)"
+                }
+            }
+        },
+        "three": {
+            "header": "3. Choose a date",
+            "p1": "Once you have chosen your experiment and the telescope, the next step is to choose the specific day when you want to run it.",
+            "p2": "To allow everyone to get time, there is a maximum of 2 reservations per 7 days. We will be reviewing this restriction as we go, learning from you.",
+            "p3": "Click on one of the available days to continue."
+        },
+        "four": {
+            "header": "4. Pick a timeslot",
+            "p1": "On the left timeslots that are available for the selected day will be shown. Click on one to see a summary of your reservation.",
+            "p2": "If everything is correct, you just have to apply and wait for confirmation.",
+            "loading": "Loading",
+            "noslot": "There is no timeslot available for that day",
+            "notime": "You have reached your maximum observing time",
+            "done": "Your new reservation has been accepted. Check it",
+            "here": "here",
+            "summary": {
+                "title": "Reservation summary",
+                "what": {
+                    "title": "What?",
+                    "text": "You are trying to book time to use @{p1}@ with the @{p2}@ experiment."
+                },
+                "when": {
+                    "title": "When?",
+                    "text": "Want to request time between @{p1}@ UT and @{p2}@ UT."
+                },
+                "request": "Request"
+            },
+            "table": {
+                "begin": "Begin",
+                "end": "End"
+            }
+        }
+    }
 }
