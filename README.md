@@ -1,2 +1,2 @@
-GLORIAExperimentReservations
-============================
+Experiment Reservations interface
+=================================
