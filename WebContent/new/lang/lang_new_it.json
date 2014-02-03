@@ -16,7 +16,7 @@
 			}
 		},
 		"two": {
-			"header": "2. Select a telescope",
+			"header": "2. Selezionare un telescopio",
 			"telescopes": {
 				"tads": {
 					"name": "TADs",
