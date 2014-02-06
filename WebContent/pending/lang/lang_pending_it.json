@@ -2,7 +2,7 @@
         "header" : "Le tue prenotazioni",
         "intro": {
                 "p1": "Tutto il tempo osservativo che allochi costituisce 'prenotazioni in attesa' fino a quando queste scadono. Ricorda che questo tempo è esclusivamente per te; nussun altro può usarlo. Come vedi, al momento il numero massimo di prenotazioni che puoi accumulare è 2, ma queste possono essere simultanee su 2 diversi telescopi!",
-                "p2": "Questo pannello ti permette di gestire le tue prenotazioni, così che puoi verificarle ed eventualmente cancellarle, e non appena divengono attive, accedere l'esperimento e controllare il telescopio. Per farlo, semplicemente, semplicemente dai un click sulla prenotazione che ti interessa e guarda le opzioni. E' importante considerare che le condizini meteorologiche in prossimità dell'ora del tuo esperimento potrebbero essere tali da non consentire al telescopio di osservare."
+                "p2": "Questo pannello ti permette di gestire le tue prenotazioni, così che puoi verificarle ed eventualmente cancellarle, e non appena divengono attive, accedere l'esperimento e controllare il telescopio. Per farlo, semplicemente, semplicemente dai un click sulla prenotazione che ti interessa e guarda le opzioni. E' importante considerare che le condizini meteorologiche in prossimità dell'ora del tuo esperimento potrebbero essere tali da non consentire al telescopio di osservare"
         },
         "loading": "Sto caricando",
         "nores": "Non hai nessuna prenotazione in attesa. Vai alla pagina delle rprenotazioni",
