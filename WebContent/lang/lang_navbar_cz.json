@@ -1,26 +1,26 @@
 {
 	"titles" : {
-		"home": "Home",
+		"home": "Úvod",
 		"experiments": {
-			"header": "Experiments",
+			"header": "Experimenty",
 			"online": {
 				"header": "Online",
-				"solar" : "Solar"
+				"solar" : "Sluneční"
 			},
 			"reservations" : {
-				"header": "RESERVATIONS",
-				"new": "New",
-				"pending": "Pending"
+				"header": "RESERVACE",
+				"new": "Nová",
+				"pending": "Nevyřízené"
 			}
 		},
 		"images": {
-			"header": "Images"
+			"header": "Snímky"
 		},
         "profile": {
-            "header": "Profile"
+            "header": "Profil"
         },
         "issues": {
-            "header": "Issues"
+            "header": "Problémy"
         }
 	}
 }
