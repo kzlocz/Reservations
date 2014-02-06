@@ -6,8 +6,8 @@
 		</div>
 	</div>
 	<div style="margin-bottom: 35px">
-		<p>{{'pending.intro.p1'|i18n}}.</p>
-		<p>{{'pending.intro.p2'|i18n}}.</p>
+		<p>{{'pending.intro.p1'|i18n}}</p>
+		<p>{{'pending.intro.p2'|i18n}}</p>
 	</div>
 	<div class="animate-show" ng-show="reservationSelected"
 		style="position: relative">
@@ -34,8 +34,7 @@
 	<div ng-show="pendingRetrieved && pending.length == 0">
 		<div class="alert alert-g animate-show"
 			style="width: 40%; margin-left: 30%">
-			{{'pending.nores' |i18n}}<a style="color: black" href="#/new">
-				{{'pending.here' |i18n}}</a>.
+			{{'pending.nores' |i18n}}<a style="color: black" href="#/new"> {{'pending.here' |i18n}}</a>.
 		</div>
 	</div>
 	<div ng-show="pending.length > 0 && !loading" id="pagination2"
