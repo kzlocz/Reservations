@@ -2,7 +2,7 @@
 	"header" : "Tus reservas",
 	"intro": {
 		"p1": "Todo el tiempo de observación que consigues formará parte de tus reservas pendientes mientras no haya vencido. Recuerda que ese tiempo es en exclusiva para tí, nadie más puede utilizarlo a la vez. Como ya sabes, por ahora el máximo número de reservas que puedes acumular son 2, ¡pero podrían ser simultáneas!",
-		"p2": "Este panel te permite gestionar tus reservas, de forma que puedas revisarlas, cancelarlas y, en cuanto sean activas, acceder al experimento y controlar el telescopio. Para ello, sólo tienes que hacer click en la reserva que te interese y ver las opciones. Es importante que tengas en cuenta que cuando llegue el momento de que inicies tu experimento, es posible que el tiempo atmosférico no permita al telescopio observar. Son las cosas del directo"
+		"p2": "Este panel te permite gestionar tus reservas, de forma que puedas revisarlas, cancelarlas y, en cuanto sean activas, acceder al experimento y controlar el telescopio. Para ello, sólo tienes que hacer click en la reserva que te interese y ver las opciones. Es importante que tengas en cuenta que cuando llegue el momento de que inicies tu experimento, es posible que el tiempo atmosférico no permita al telescopio observar. Son las cosas del directo."
 	},
 	"loading": "Cargando",
 	"nores": "No tienes ninguna reserva pendiente en este momento. Ve y haz una",
