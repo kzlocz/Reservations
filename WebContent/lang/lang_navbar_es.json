@@ -4,17 +4,30 @@
 		"experiments": {
 			"header": "Experimentos",
 			"online": {
-				"header": "Online",
-				"solar" : "Solar"
+				"header": "ONLINE",
+				"solar" : "Solar",
+				"night" : "Nocturno"
 			},
 			"reservations" : {
 				"header": "RESERVAS",
 				"new": "Nueva",
 				"pending": "Pendientes"
+			},
+			"offline": {
+				"header": "OFFLINE",
+				"pspace" : "Personal space",
+				"wolf": "Actividad solar",
+                "luiza": "Estrellas variables"
 			}
 		},
 		"images": {
 			"header": "Imágenes"
-		}
+		},
+        "profile": {
+            "header": "Perfil"
+        },
+        "issues": {
+            "header": "Incidencias"
+        }
 	}
 }

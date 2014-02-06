@@ -1,20 +1,33 @@
 {
-	"titles" : {
-		"home": "Home",
-		"experiments": {
-			"header": "Experiments",
-			"online": {
-				"header": "Online",
-				"solar" : "Solar"
-			},
-			"reservations" : {
-				"header": "RESERVATIONS",
-				"new": "New",
-				"pending": "Pending"
-			}
-		},
-		"images": {
-			"header": "Images"
-		}
-	}
+    "titles": {
+        "home": "Home",
+        "experiments": {
+            "header": "Experiments",
+            "online": {
+                "header": "ONLINE",
+                "solar": "Solar",
+                "night": "Night"
+            },
+            "reservations": {
+                "header": "RESERVATIONS",
+                "new": "New",
+                "pending": "Pending"
+            },
+            "offline": {
+                "header": "OFFLINE",
+                "pspace": "Personal space",
+                "wolf": "Solar activity",
+                "luiza": "Variable stars"
+            }
+        },
+        "images": {
+            "header": "Images"
+        },
+        "profile": {
+            "header": "Profile"
+        },
+        "issues": {
+            "header": "Issues"
+        }
+    }
 }
