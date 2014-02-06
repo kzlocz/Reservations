@@ -1,0 +1,13 @@
+{
+	"header": "Incidencias del software",
+	"intro": "Queremos compartir contigo la lista de problemas que actualmente estamos intentando resolver y las mejoras en las que trabajamos. Para hacer esto nos apoyamos en los servicios de nuestros repositorios en GitHub, y en concreto para este sitio, del proyecto Reservations.",
+	"scope": "Reservations es el software que te permite ver las páginas para crear y gestionar reservas. Por tanto, todas las incidencias que se muestran aquí se refieren a los contenidos citados.",
+	"bugs": "Errores",
+	"none": "Ningún tema abierto",
+	"enhancements": "Mejoras",
+	"contribute": {
+		"header": "¿Quieres contribuir?",
+		"pre": "Visita nuestra organización de GitHub e involúcrate con el repositorio de",
+		"post": ". Para que puedas contribuir debes tener una cuenta. Tras iniciar sesión, podrás crear nuevos temas, comentar y ayudarnos a mejorar GLORIA."
+	}
+}
