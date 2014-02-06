@@ -1,0 +1,163 @@
+.barousel
+{
+    position:relative;
+    margin-bottom:0px;
+    /*background:url(../images/bg_banner.gif) repeat 0 0;*/
+    width:500px;
+    height:401px;
+    border-top:3px solid #000;
+    overflow: hidden; 
+}
+
+.barousel_image
+{
+    position:absolute;
+    z-index:10;
+    width:500px;
+    height:375px;
+}
+
+.barousel_image img
+{
+    position:absolute;
+    display:none;
+}
+
+.barousel_image img.default
+{    
+    display:block;
+}
+
+.barousel_image img.current
+{
+    z-index:10;
+}
+
+.barousel_image img.previous
+{
+    z-index:5;
+}
+
+.barousel_content
+{
+    position:absolute;
+    padding:10px 13px 0 13px;    
+    z-index:20;
+    background:url(../img/bg_barousel_content.png) repeat 0 0;
+    color:#fff;
+    width:55%;
+    bottom:25px;
+    left:40%;
+}
+
+.barousel_content div
+{
+    display:none;    
+}
+
+.barousel_content div.default
+{
+    display:block;    
+}
+
+.barousel_content p
+{
+    font-size:13px;
+    font-weight:normal; 
+    line-height:13px;   
+}
+
+.barousel_content p.header
+{
+    font-size:22px;
+    font-weight:normal;
+    line-height:22px;
+    color:#FF9900;
+}
+
+.barousel_content a,
+.barousel_content a:hover
+{
+    color:#fff55b;
+    background-color:transparent !important;
+}
+
+.barousel_nav
+{
+    position:absolute;
+    padding:3px 3px 0px 0;
+    height:23px;    
+    background:#000;
+    bottom:0;
+    z-index:50;
+    width:497px;
+}
+
+.barousel_nav .counter
+{    
+    float:right;
+    font-size:0.75em;
+    color:#fff;
+    margin:3px 5px 0 0;
+}
+
+.barousel_nav ul
+{
+    float:right;
+    padding:0;
+    margin:0;
+}
+
+.barousel_nav li
+{
+    float:left;
+    padding-left:3px;
+    font-size:0;
+    line-height:0;
+    list-style:none;
+}
+
+.barousel_nav li a
+{
+    display:block;
+    width:25px;
+    height:20px;
+    background-color: #FF9900;
+    font-size:0;
+    line-height:0;
+    text-decoration:none;
+	border-radius: 3px;
+}
+
+.barousel_nav li a:hover
+{
+    background-color:#6e6e6e;
+}
+
+.barousel_nav li a.current
+{
+    background-color:#08c;
+}
+
+.barousel_nav li.prev a
+{
+    background-image:url(../img/barousel_link_previous.gif);
+    background-repeat:no-repeat;
+    background-position:0 0;
+}
+
+.barousel_nav li.next a
+{
+    background-image:url(../img/barousel_link_next.gif);
+    background-repeat:no-repeat;
+    background-position:0 0;
+}
+
+.barousel img.ajax_loader
+{
+    display:none;
+    position:absolute;
+    z-index:99;
+    top:70px;
+    left:135px;
+}

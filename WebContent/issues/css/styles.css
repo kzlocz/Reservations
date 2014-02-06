@@ -1,0 +1,47 @@
+.right-bar {
+	-moz-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.19);
+	box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.19);
+	border-radius: 2px;
+	margin-left: 10px;
+	border: 1px solid #0A0A0A;
+	background-color: #0F0F0F;
+}
+
+.experiment-banner {
+	line-height: 17px;
+	height: 96px;
+	overflow: hidden;
+	font-size: 90%;
+	text-align: left;
+	background-repeat: no-repeat;
+	padding: 10px;
+	padding-left: 320px;
+	background-color: #0F0F0F;
+}
+
+.accordion-inner {
+	padding: 9px 15px;
+	border-top: 1px solid rgba(160, 103, 0, 0.94);
+	color: rgb(139, 139, 139);
+	font-size: 95%;
+}
+
+.accordion-group {
+	margin-bottom: 2px;
+	border: none;
+	background-color: #0f0f0f;
+	-moz-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.19);
+	box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.19);
+}
+
+.accordion-heading .accordion-toggle {
+	color: rgb(213, 213, 213);
+	padding-left: 6px;
+}
+
+.icon-plus {
+	margin: 0px;
+	margin-left: 8px;
+}

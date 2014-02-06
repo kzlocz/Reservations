@@ -1,0 +1,78 @@
+<link href="issues/css/styles.css" rel="stylesheet"></link>
+<div ng-controller="IssuesController" ng-show="ready"
+	ng-init="repo='Reservations'">
+	<div class="page-header" style="border: none; margin-bottom: 10px">
+		<div class="row" style="margin-bottom: 0px">
+			<h2 style="margin-left: 18px">{{'issues.header' | i18n}}</h2>
+		</div>
+	</div>
+	<div style="margin-bottom: 35px">
+		<div ng-bind-html="introHtml"></div>
+		<div ng-bind-html="scopeHtml"></div>
+	</div>
+
+	<h3>{{'issues.bugs'|i18n}}</h3>
+	<div style="width: 150px" class="alert alert-g" ng-show="!bugsLoaded">
+		{{'issues.loading'|i18n}}...</div>
+	<div style="width: 150px" class="alert alert-g"
+		ng-show="bugsLoaded && !bugsReady">{{'issues.none'|i18n}}</div>
+	<div ng-show="bugsReady" class="accordion animate-show" id="accordion1">
+		<div ng-repeat="issue in bugs" class="accordion-group">
+			<div class="accordion-heading" style="overflow: hidden">
+				<img tooltip-popup-delay="500" tooltip="{{issue.user.login}}"
+					tooltip-placement="left"
+					style="float: left; max-width: 24px; padding: 6px"
+					ng-src="{{issue.user.avatar_url}}"><a style="float: left"
+					class="accordion-toggle" data-toggle="collapse"
+					data-parent="#accordion1" ng-href="#collapse1{{$index}}"
+					target="_self">{{issue.title}}</a>
+				<p style="float: right; margin: 0px; padding: 8px">{{issue.created_at
+					| date:medium}}</p>
+			</div>
+			<div id="collapse1{{$index}}" class="accordion-body collapse in">
+				<div class="accordion-inner">
+					<p style="margin: 0px">
+						{{issue.body}}<a ng-href="{{issue.html_url}}" target="_blank"><i
+							class="icon-plus"></i></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h3>{{'issues.enhancements'|i18n}}</h3>
+	<div style="width: 150px" class="alert alert-g"
+		ng-show="!enhancementsLoaded">{{'issues.loading'|i18n}}...</div>
+	<div style="width: 150px" class="alert alert-g"
+		ng-show="enhancementsLoaded && !enhancementsReady">{{'issues.none'|i18n}}</div>
+	<div ng-show="enhancementsReady" class="accordion animate-show"
+		id="accordion2">
+		<div ng-repeat="issue in enhancements" class="accordion-group">
+			<div class="accordion-heading" style="overflow: hidden">
+				<img tooltip-popup-delay="500" tooltip="{{issue.user.login}}"
+					tooltip-placement="left"
+					style="float: left; max-width: 24px; padding: 6px"
+					ng-src="{{issue.user.avatar_url}}"><a style="float: left"
+					class="accordion-toggle" data-toggle="collapse"
+					data-parent="#accordion2" ng-href="#collapse2{{$index}}"
+					target="_self">{{issue.title}}</a>
+				<p style="float: right; margin: 0px; padding: 8px">{{issue.created_at
+					| date:medium}}</p>
+			</div>
+			<div id="collapse2{{$index}}" class="accordion-body collapse in">
+				<div class="accordion-inner">
+					<p style="margin: 0px">
+						{{issue.body}}<a ng-href="{{issue.html_url}}" target="_blank"><i
+							class="icon-plus"></i></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h3>{{'issues.contribute.header'|i18n}}</h3>
+	<p>
+		{{'issues.contribute.pre'|i18n}} <strong><a
+			href="https://github.com/GLORIA-project/Reservations/issues"
+			style="color: silver">Reservations</a></strong>{{'issues.contribute.post'|i18n}}
+	</p>
+</div>
