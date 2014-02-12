@@ -1,18 +1,18 @@
 {
-    "header": "Your reservation",
+    "header": "Twoja rezerwacja",
     "intro": {
-        "p1": "All timeslots you are allocated will be part of your pending reservations until they have expired. Remember that time is exclusively for you, nobody else can use it. The maximum number of reservations that you can accumulate is 2, but they could be simultaneous!",
-        "p2": "This panel allows you to manage your reservations, so you can review and cancel them, and as soon as they are active, access the experiment and control the telescope. To do this, simply click the reservation of interest and see your options. It is important to note that when the time comes to start your experiment, the weather may prohibit the telescope from observing."
+        "p1": "Wszystkie zamówione przez Ciebie przedziały czasowe wygasły. Pamiętaj, że zarezerwowany przedział czasowy może być wykorzystany jednie i wyłącznie przez Ciebie. W sumie możesz wykonać nie więcej niż 2 rezerwacje, przy czym obserwacje nie mogą mieć miejsce jednocześnie!",
+        "p2": "Ten panel umożliwia na zarządzanie Twoimi rezerwacjami. Możesz je zobaczyć, anulować, a gdy są już dostępne, skorzystać z eksperymentu i kontrolować teleskop. Aby zobaczyć wszystkie opcje po prostu kliknij na swoją rezerwację. Pamiętaj aby zanotować datę i czas swoich obserwacji. Zła pogoda może zakłócić lub umożliwić jej wykonanie."
     },
-    "loading": "Loading",
-    "nores": "You do not have any pending reservation now. Go and get one for you.",
-    "here": "here",
-    "go": "Go",
-    "cancel": "Cancel",
+    "loading": "Wczytuję",
+    "nores": "Nie posiadasz żadnych rezerwacji oczekujących na realizację. Przejdź dalej by zarezerwować teleskop.",
+    "here": "tutaj",
+    "go": "Rezerwuj",
+    "cancel": "Anuluj",
     "table": {
-        "experiment": "Experiment",
-        "begin": "Begin",
-        "end": "End",
-        "telescopes": "Telescopes"
+        "experiment": "Eksperyment",
+        "begin": "Rozpocznij",
+        "end": "Zakończ",
+        "telescopes": "Teleskopy"
     }
 }
