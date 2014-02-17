@@ -1,63 +1,63 @@
 {
-    "header": "Make a reservation",
-    "intro": "In order use a telescope's observing time you must make a booking. Then, when the time comes, you will have the telescope all to yourself. Each telescope owner sets the availability of their telescope. We then allocate intervals of 15 minutes during the available times.",
+    "header": "Wykonaj rezerwacje",
+    "intro": "Żeby uzyskać dostęp do teleskopów musisz zawczasu wykonać rezerwację. Następnie będziesz mógł samodzielnie z niego korzystać. Właściciel teleskopu wyznacza czas w którym jest on dostępny. W tym przedziale możesz wybrać 15 minut czasu własnej obserwacji.",
     "phases": {
         "one": {
-            "header": "1. Select an experiment",
+            "header": "1. Wybierz eksperyment",
             "experiments": {
                 "solar": {
-                    "name": "Solar experiment",
-                    "desc": "Explore the Sun and its spots"
+                    "name": "Eksperyment słoneczny",
+                    "desc": "Zobacz Słońce i jego plamy"
                 },
                 "night": {
-                    "name": "Night experiment",
-                    "desc": "Watch the night sky"
+                    "name": "Nocne obserwacje",
+                    "desc": "Oglądaj niebo w nocy"
                 }
             }
         },
         "two": {
-            "header": "2. Select a telescope",
+            "header": "2. Wybierz teleskop",
             "telescopes": {
                 "tads": {
-                    "name": "TADs",
-                    "desc": "Tenerife, Spain (IAC)"
+                    "name": "TAD",
+                    "desc": "Teneryfa, Hiszpania (IAC)"
                 },
                 "bart": {
                     "name": "BART",
-                    "desc": "Ondrejov, Czech Republic (AUAV)"
+                    "desc": "Ondrejov, Czechy (AUAV)"
                 }
             }
         },
         "three": {
-            "header": "3. Choose a date",
-            "p1": "Once you have chosen your experiment and the telescope, the next step is to choose the specific day when you want to run it.",
-            "p2": "To allow everyone to get time, there is a maximum of 2 reservations per 7 days. We will be reviewing this restriction as we go, learning from you.",
-            "p3": "Click on one of the available days to continue."
+            "header": "3. Wybierz datę",
+            "p1": "Po wybraniu eksperymentu i teleskopu prosimy o wybranie dnia w którym chciałbyś go użyć.",
+            "p2": "Aby każdy mógł skorzystać z teleskopów, można dokonać nie więcej niż 2 rezerwacje na tydzień. Liczbę dostępnych rezerwacji będziemy dostosowywać w zależności od obłożenia teleskopów. ",
+            "p3": "Aby zacząć wybierz jeden z dostępnych dni."
         },
         "four": {
-            "header": "4. Pick a timeslot",
-            "p1": "On the left timeslots that are available for the selected day will be shown. Click on one to see a summary of your reservation.",
-            "p2": "If everything is correct, you just have to apply and wait for confirmation.",
-            "loading": "Loading",
-            "noslot": "There is no timeslot available for that day",
-            "notime": "You have reached your maximum observing time",
-            "done": "Your new reservation has been accepted. Check it",
-            "here": "here",
+            "header": "4. Wybierz przedział czasowy",
+            "p1": "Po lewej stronie znajdują się przedziały czasowe dostępne w danym dniu. Wybierz jeden z nich aby zobaczyć podsumowanie swojej rezerwacji.",
+            "p2": "Jeśli wszystko jest w porządku po prostu zaakceptuj i czekaj na potwierdzenie.",
+            "loading": "Wczytuje",
+            "noslot": "Dzisiaj już nie ma dostępnych przedziałów czasowych",
+            "notime": "Przekroczyłeś już swój czas obserwacji",
+            "done": "Twoja rezerwacja została przyjęta. Zobacz ją",
+            "here": "tutaj",
             "summary": {
-                "title": "Reservation summary",
+                "title": "Podsumowanie rezerwacji",
                 "what": {
-                    "title": "What?",
-                    "text": "You are trying to book time to use @{p1}@ with the @{p2}@ experiment."
+                    "title": "Co się dzieje?",
+                    "text": "Wystąpiłeś o rezerwację czasu na teleskopie @{p1}@ w ramach eksperymentu @{p2}@."
                 },
                 "when": {
-                    "title": "When?",
-                    "text": "Want to request time between @{p1}@ UT and @{p2}@ UT."
+                    "title": "Kiedy?",
+                    "text": "Wybieram czas obserwacji między @{p1}@ UT a @{p2}@ UT."
                 },
-                "request": "Request"
+                "request": "Zamów"
             },
             "table": {
-                "begin": "Begin",
-                "end": "End"
+                "begin": "Rozpocznij",
+                "end": "Zakończ"
             }
         }
     }
