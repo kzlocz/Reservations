@@ -1,13 +1,13 @@
 {
-	"header": "Software issues",
-	"intro": "We want to share with you the list of problems we're trying to solve and improvements in which we work. To do this we rely on the services of our GitHub repositories, and specifically for this site, the Reservations project.",
-	"scope": "Reservations is software that allows you create book observing time and manage your bookings. Therefore, all findings shown here refer to the cited content.",
-	"bugs": "Bugs",
-	"none": "No open issues",
-	"enhancements": "Enhancements",
+	"header": "Softwarové problémy",
+	"intro": "Chceme s vámi sdílet seznam problémů, které se snažíme řešit a zlepšení, na kterých pracujeme. K tomu využíváme možností služby GitHu.",
+	"scope": "Rezervace je program, který umožňuje žádat o pozorovací čas a spravovat rezervace. Zde uvedené nálezy se vzrahují k obsahu tohozo projektu.",
+	"bugs": "Chyby",
+	"none": "Žádné nevyřešené problémy",
+	"enhancements": "Vylepšení",
 	"contribute": {
-		"header": "Want to contribute?",
-		"pre": "Go to our GitHub organization and get involved into the",
-		"post": " repository issues! To be allowed to contribute you must have an account there. After you login, you will be able to create new issues, comment and help us to improve GLORIA."
+		"header": "Chcete se podílet?",
+		"pre": "Navštivte náš GitHub zapojte se do řešení",
+		"post": " nahlášených problémů! Abyste mohli přispívat, musíte mít GitHub účet. Po přihlášení pak budete mít možnost hlásit problémy, komentovat a pomáhat nám zlepšovat projekt GLORIA."
 	}
 }
