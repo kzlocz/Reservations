@@ -25,7 +25,27 @@
 				"bart": {
 					"name": "BART",
 					"desc": "Ondrejov, Repubblica Ceca (AUAV)"
-				}
+				},
+                "b1a": {
+                    "name": "BOOTES-1A",
+                    "desc": "Andalucia, Spain (CSIC)"
+                },
+                "b1b": {
+                    "name": "BOOTES-1B",
+                    "desc": "Andalucia, Spain (CSIC)"
+                },
+                "b2": {
+                    "name": "BOOTES-2",
+                    "desc": "Andalucia, Spain (CSIC)"
+                },
+                "b3": {
+                    "name": "BOOTES-3",
+                    "desc": "New Zealand (CSIC)"
+                },
+                "d50": {
+                    "name": "D50",
+                    "desc": "Ondrejov, Czech Republic (AUAV)"
+                }
 			}
 		},
 		"three": {
