@@ -1,26 +1,26 @@
 {
 	"titles" : {
-		"home": "Home",
+		"home": "Główna",
 		"experiments": {
-			"header": "Experiments",
+			"header": "Eksperyment",
 			"online": {
 				"header": "Online",
-				"solar" : "Solar"
+				"solar" : "Dzienny"
 			},
 			"reservations" : {
-				"header": "RESERVATIONS",
-				"new": "New",
-				"pending": "Pending"
+				"header": "REZERWACJE",
+				"new": "Nowa",
+				"pending": "Oczekująca"
 			}
 		},
 		"images": {
-			"header": "Images"
+			"header": "Zdjęcia"
 		},
         "profile": {
-            "header": "Profile"
+            "header": "Profil"
         },
         "issues": {
-            "header": "Issues"
+            "header": "Błędy"
         }
 	}
 }
