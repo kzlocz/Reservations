@@ -1,63 +1,63 @@
 {
-    "header": "Make a reservation",
-    "intro": "In order use a telescope's observing time you must make a booking. Then, when the time comes, you will have the telescope all to yourself. Each telescope owner sets the availability of their telescope. We then allocate intervals of 15 minutes during the available times.",
+    "header": "Vytvořte rezervaci",
+    "intro": "Pro použití dalekohledu je třeba rezervovat pozorovací čas, během kterého máte dalekohled sám(a) pro sebe. Alokují se 15 minutové intervaly z celkového času, který nastavuje vlastník dalekohledu.",
     "phases": {
         "one": {
-            "header": "1. Select an experiment",
+            "header": "1. Vyberte experiment",
             "experiments": {
                 "solar": {
-                    "name": "Solar experiment",
-                    "desc": "Explore the Sun and its spots"
+                    "name": "Sluneční experiment",
+                    "desc": "Prozkoumejte Slunce a jeho skvrny"
                 },
                 "night": {
-                    "name": "Night experiment",
-                    "desc": "Watch the night sky"
+                    "name": "Noční experiment",
+                    "desc": "Pozorujte noční oblohu"
                 }
             }
         },
         "two": {
-            "header": "2. Select a telescope",
+            "header": "2. Vyberte dalekohled",
             "telescopes": {
                 "tads": {
                     "name": "TADs",
-                    "desc": "Tenerife, Spain (IAC)"
+                    "desc": "Tenerife, Španělsko (IAC)"
                 },
                 "bart": {
                     "name": "BART",
-                    "desc": "Ondrejov, Czech Republic (AUAV)"
+                    "desc": "Ondřejov, Česká republika (AUAV)"
                 }
             }
         },
         "three": {
-            "header": "3. Choose a date",
-            "p1": "Once you have chosen your experiment and the telescope, the next step is to choose the specific day when you want to run it.",
-            "p2": "To allow everyone to get time, there is a maximum of 2 reservations per 7 days. We will be reviewing this restriction as we go, learning from you.",
-            "p3": "Click on one of the available days to continue."
+            "header": "3. Vyberte datum",
+            "p1": "Když máte vybraný experiment a dalekohled, následuje výběr konkrétního dne, kdy chcete experiment uskutečnit.",
+            "p2": "Z důvodu spravedlivého využití pozorovacího času je stanoven maximální počet 2 rezervací běhen jednoho týdne. Časem se toto omezení může změnit.",
+            "p3": "Pokračujte kliknutím na jeden z dostupných dní."
         },
         "four": {
-            "header": "4. Pick a timeslot",
-            "p1": "On the left timeslots that are available for the selected day will be shown. Click on one to see a summary of your reservation.",
-            "p2": "If everything is correct, you just have to apply and wait for confirmation.",
-            "loading": "Loading",
-            "noslot": "There is no timeslot available for that day",
-            "notime": "You have reached your maximum observing time",
-            "done": "Your new reservation has been accepted. Check it",
-            "here": "here",
+            "header": "4. Vyberte časový interval",
+            "p1": "Nalevo budou zobrazeny časové intervaly dostupné pro vybraný den. Kliknutím na jeden z nich zobrazíte přehled vašich rezervací.",
+            "p2": "Pokud je všechno v pořádku, odešlete žádost a počkejte na potvrzení.",
+            "loading": "Nahrávám",
+            "noslot": "Pro tento ten není dostupný žádný časový interval",
+            "notime": "Dosáhl(a) jste maxima vašeho pozorovacího času",
+            "done": "Vaše nová rezervace byla akceptována. Můžete ověřit",
+            "here": "zde",
             "summary": {
-                "title": "Reservation summary",
+                "title": "Přehled rezervací",
                 "what": {
-                    "title": "What?",
-                    "text": "You are trying to book time to use @{p1}@ with the @{p2}@ experiment."
+                    "title": "Co?",
+                    "text": "Pokoušíte se rezervovat experiment @{p2}@ na dalekohledu @{p1}@."
                 },
                 "when": {
-                    "title": "When?",
-                    "text": "Want to request time between @{p1}@ UT and @{p2}@ UT."
+                    "title": "Kdy?",
+                    "text": "Požadujete čas mezi @{p1}@ UT a @{p2}@ UT."
                 },
-                "request": "Request"
+                "request": "Požadavek"
             },
             "table": {
-                "begin": "Begin",
-                "end": "End"
+                "begin": "Začátek",
+                "end": "Konec"
             }
         }
     }
