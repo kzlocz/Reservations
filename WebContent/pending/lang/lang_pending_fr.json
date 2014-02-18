@@ -1,18 +1,19 @@
 {
-    "header": "Your reservation",
+    "header": "Votre réservation",
     "intro": {
-        "p1": "All timeslots you are allocated will be part of your pending reservations until they have expired. Remember that time is exclusively for you, nobody else can use it. The maximum number of reservations that you can accumulate is 2, but they could be simultaneous!",
-        "p2": "This panel allows you to manage your reservations, so you can review and cancel them, and as soon as they are active, access the experiment and control the telescope. To do this, simply click the reservation of interest and see your options. It is important to note that when the time comes to start your experiment, the weather may prohibit the telescope from observing."
+        "p1": "Toutes les périodes d'observation qui vous ont été octroyées feront partie de vos réservations en attente jusqu'à ce qu'elles expirent. Sachez que ce temps vous est personellement dédié. Vous pouvez effectuer un maximum de deux réservations par semaine, mais elles peuvent être simultanées.",
+        "p2": "Ce panneau vous permet de gérer vos réservations. Vous pouvez les afficher ou les supprimer, et dès qu'elles sont actives, accéder à l'expérience et controler le télescope. Pour ce faire, cliquez simplement sur la réservation qui vous intéresse pour revoir vos options. Il est important que vous sachiez que d'éventuelles mauvaises conditions météo pendant votre temps imparti empêcheront le fonctionnement du télescope."
+    
     },
-    "loading": "Loading",
-    "nores": "You do not have any pending reservation now. Go and get one for you.",
-    "here": "here",
-    "go": "Go",
-    "cancel": "Cancel",
+    "loading": "Chargement",
+    "nores": "Vous n'avez pas encore de réservation en cours.",
+    "here": "ici",
+    "go": "Allez",
+    "cancel": "Annuler",
     "table": {
-        "experiment": "Experiment",
-        "begin": "Begin",
-        "end": "End",
-        "telescopes": "Telescopes"
+        "experiment": "Expérience",
+        "begin": "Début",
+        "end": "Fin",
+        "telescopes": "Télescopes"
     }
 }
