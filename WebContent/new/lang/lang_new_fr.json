@@ -1,83 +1,63 @@
 {
-    "header": "Make a reservation",
-    "intro": "In order use a telescope's observing time you must make a booking. Then, when the time comes, you will have the telescope all to yourself. Each telescope owner sets the availability of their telescope. We then allocate intervals of 15 minutes during the available times.",
+    "header": "Effectuez une réservation",
+    "intro": "En vue d'utiliser le temps d'observation d'un télescope, vous devez effectuer une réservation. Ensuite, quand viendra le moment, le télescope sera à vous! Le responsable de chaque télescope décident de la disponibilité de leur instrument. Nous allouons alors des intervalles de 15 minutes durant le temps mis à notre disposition.",
     "phases": {
         "one": {
-            "header": "1. Select an experiment",
+            "header": "1. Choisissez une expérience",
             "experiments": {
                 "solar": {
-                    "name": "Solar experiment",
-                    "desc": "Explore the Sun and its spots"
+                    "name": "Expérience solaire",
+                    "desc": "Explore le soleil et ses taches"
                 },
                 "night": {
-                    "name": "Night experiment",
-                    "desc": "Watch the night sky"
+                    "name": "Expérience nocturne",
+                    "desc": "Observez le ciel nocturne"
                 }
             }
         },
         "two": {
-            "header": "2. Select a telescope",
+            "header": "2. Sélectionnez un télescope",
             "telescopes": {
                 "tads": {
                     "name": "TADs",
-                    "desc": "Tenerife, Spain (IAC)"
+                    "desc": "Tenerife, Espagne (IAC)"
                 },
                 "bart": {
                     "name": "BART",
-                    "desc": "Ondrejov, Czech Republic (AUAV)"
-                },
-                "b1a": {
-                    "name": "BOOTES-1A",
-                    "desc": "Andalucia, Spain (CSIC)"
-                },
-                "b1b": {
-                    "name": "BOOTES-1B",
-                    "desc": "Andalucia, Spain (CSIC)"
-                },
-                "b2": {
-                    "name": "BOOTES-2",
-                    "desc": "Andalucia, Spain (CSIC)"
-                },
-                "b3": {
-                    "name": "BOOTES-3",
-                    "desc": "New Zealand (CSIC)"
-                },
-                "d50": {
-                    "name": "D50",
-                    "desc": "Ondrejov, Czech Republic (AUAV)"
+                    "desc": "Ondrejov, République Tchèque (AUAV)"
                 }
             }
         },
         "three": {
-            "header": "3. Choose a date",
-            "p1": "Once you have chosen your experiment and the telescope, the next step is to choose the specific day when you want to run it.",
-            "p2": "To allow everyone to get time, there is a maximum of 2 reservations per 7 days. We will be reviewing this restriction as we go, learning from you.",
-            "p3": "Click on one of the available days to continue."
+            "header": "3. Choisissez une date",
+            "p1": "Quand vous avez choisi une expérience et un télescope, l'étape suivante est de choisir le jour de votre expérience.",
+            "p2": "Pour permettre à tous de recevoir du temps d'observation, un maximum de 2 réservations pourront être effectuées par semaine.",
+            "p3": "Cliquez sur un des jours disponibles pour continuer."
         },
         "four": {
-            "header": "4. Pick a timeslot",
-            "p1": "On the left timeslots that are available for the selected day will be shown. Click on one to see a summary of your reservation.",
-            "p2": "If everything is correct, you just have to apply and wait for confirmation.",
-            "loading": "Loading",
-            "noslot": "There is no timeslot available for that day",
-            "notime": "You have reached your maximum observing time",
-            "done": "Your new reservation has been accepted. Check it",
-            "here": "here",
+            "header": "4. Choisissez une tranche de temps",
+            "p1": "Vous trouverz sur la gauche les périodes encore disponibles pour le jour sélectionné. Cliquez sur l'une d'elle pour afficher le résumé de votre réservation.",
+            "p2": "Si tout est correct, vous n'avez plus qu'à envoyez la demande et attendre la confirmation",
+            "loading": "Chargement",
+            "noslot": "Il n'y a pas de Pèriode d'observation disponible ce jour",
+            "notime": "Vous avez atteint votre limite de temps d'observation",
+            "done": "Votre nouvelle réservation a été acceptée, vérifiez-la",
+            "here": "ici",
             "summary": {
-                "title": "Reservation summary",
+                "title": "Résumé de la réservation",
                 "what": {
-                    "title": "What?",
-                    "text": "You are trying to book time to use @{p1}@ with the @{p2}@ experiment."
+                    "title": "Quoi?",
+                    "text": "Vous essayez de réserver du temps pour utiliser @{p1}@ avec l'expérience @{p2}@."
                 },
                 "when": {
-                    "title": "When?",
-                    "text": "Want to request time between @{p1}@ UT and @{p2}@ UT."
+                    "title": "Quand?",
+                    "text": "Demande de temps entre @{p1}@ TU et @{p2}@ TU."
                 },
-                "request": "Request"
+                "request": "Demande"
             },
             "table": {
-                "begin": "Begin",
-                "end": "End"
+                "begin": "Début",
+                "end": "Fin"
             }
         }
     }
