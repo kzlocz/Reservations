@@ -28,23 +28,23 @@
                 },
                 "b1a": {
                     "name": "BOOTES-1A",
-                    "desc": "Andalucia, Spain (CSIC)"
+                    "desc": "Andaluzja, Hiszpania (CSIC)"
                 },
                 "b1b": {
                     "name": "BOOTES-1B",
-                    "desc": "Andalucia, Spain (CSIC)"
+                    "desc": "Andaluzja, Hiszpania (CSIC)"
                 },
                 "b2": {
                     "name": "BOOTES-2",
-                    "desc": "Andalucia, Spain (CSIC)"
+                    "desc": "Andaluzja, Hiszpania (CSIC)"
                 },
                 "b3": {
                     "name": "BOOTES-3",
-                    "desc": "New Zealand (CSIC)"
+                    "desc": "Nowa Zelandia (CSIC)"
                 },
                 "d50": {
                     "name": "D50",
-                    "desc": "Ondrejov, Czech Republic (AUAV)"
+                    "desc": "Ondrejov, Czechy (AUAV)"
                 }
             }
         },
